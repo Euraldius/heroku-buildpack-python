@@ -13,11 +13,21 @@ def main():
     packages = []
     for package in lockfile.get('default', {}):
         try:
-            packages.append('{0}{1}'.format(package, lockfile['default'][package]['version']))
+            if 'git' in lockfile['default'][package]:
+                packages.append('-e git+{0}#egg={1}'.format(
+                    lockfile['default'][package]['git'],
+                    package
+                ))
+            else:
+                packages.append('{0}{1}'.format(
+                    package,
+                    lockfile['default'][package]['version']
+                ))
         except KeyError:
             pass
 
     print('\n'.join(packages))
+
 
 if __name__ == '__main__':
     main()
