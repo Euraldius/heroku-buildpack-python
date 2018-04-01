@@ -8,7 +8,7 @@ def main():
     INFILE = sys.argv[1]
 
     with open(INFILE, 'rb') as f:
-        prints f
+        print f
         lockfile = json.load(f)
 
     packages = []
