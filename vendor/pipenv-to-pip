@@ -8,7 +8,6 @@ def main():
     INFILE = sys.argv[1]
 
     with open(INFILE, 'rb') as f:
-        import pdb; pdb.set_trace()
         lockfile = json.load(f)
 
     packages = []
