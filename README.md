@@ -1,3 +1,8 @@
+I forked this repo cuz I was working on this awesome project for a client (it helped queer people, ergo, awesome) and I was using Pipenv to handle my Django app. This was pretty cool, but heroku's buildpack for it didn't handle git URL references in the Pipfile successfully, so I forked it here to make it work for myself.
+
+I've guessing they've fixed it by now but I'm no longer actively working on that application so I haven't needed to check. Keeping this around just in case 💁
+
+---
 ![python](https://cloud.githubusercontent.com/assets/51578/13712821/b68a42ce-e793-11e5-96b0-d8eb978137ba.png)
 
 # Heroku Buildpack: Python
